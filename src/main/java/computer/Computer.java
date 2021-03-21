@@ -4,7 +4,8 @@ public class Computer {
     
     private String operatingSystem = "Linux";
     private double processTact = 2.4;
-    private double hardDrive = 500;
+    private double memory = 16.0;
+    private int hardDrive = 500;
     
     public String getOperatingSystem() {
         return this.operatingSystem;
@@ -22,11 +23,19 @@ public class Computer {
         this.processTact = newProcessTact;
     }
     
-    public double getHardDrive() {
-        return this.processTact;
+    public double getMemory() {
+        return this.memory;
     }
     
-    public void setHardDrive(double newHardDrive) {
+    public void setMemory(double newMemory) {
+        this.memory = newMemory;
+    }
+    
+    public int getHardDrive() {
+        return this.hardDrive;
+    }
+    
+    public void setHardDrive(int newHardDrive) {
         this.processTact = newHardDrive;
     }
     
@@ -34,7 +43,7 @@ public class Computer {
         
     }
         
-    public Computer(String operatingSystem, double processTact, double hardDrive) {
+    public Computer(String operatingSystem, double processTact, double memory, int hardDrive) {
         this.operatingSystem = operatingSystem;
         this.processTact = processTact;
         this.hardDrive = hardDrive;
