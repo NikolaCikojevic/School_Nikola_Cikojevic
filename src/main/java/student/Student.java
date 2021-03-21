@@ -1,5 +1,8 @@
 package student;
 
+import computer.Computer;
+import course.Course;
+
 
 
 
@@ -11,9 +14,8 @@ public class Student {
     private String firstName;
     private String lastName;
     private int yearOfBirth;
-    private Object Course;
-    private Object Computer;
-    
+    private Course course;
+    private Computer computer;
             
     public String getFirstName() {
         return this.firstName;
@@ -39,17 +41,17 @@ public class Student {
         this.yearOfBirth = newYearOfBirth;
     }
     
-    public Object getCourse() {
-        return this.Course;
+    public Course getCourse() {
+        return this.course;
     }
        
-    public Object getComputer() {
-        return this.Computer;
+    public Computer getComputer() {
+        return this.computer;
     }
     
-    public Student(Object Course, Object Computer) {
-        this.Course = Course;
-        this.Computer = Computer;
+    public Student() {
+        this.course = new Course();
+        this.computer = new Computer();
     }
     
     public Student(String firstName, String lastName, int yearOfBirth) {
@@ -62,10 +64,11 @@ public class Student {
         System.out.println("First name: " + this.getFirstName());
         System.out.println("Last name: " + this.getLastName());
         System.out.println("Year of birth: " + this.getYearOfBirth());
-        System.out.println("Course name: " + this.getName());
-        System.out.println("Course number of classes: " + this.getNumberOfClasses());
-        System.out.println("Process tact: " + this);
-        System.out.println("Memory: " + this.);
+        System.out.println("Course name: " + this.course.getName());
+        System.out.println("Course number of classes: " + this.course.getNumberOfClasses());
+        System.out.println("Process tact: " + this.computer.getProcessTact());
+        System.out.println("Memory: " + this.computer.getMemory());
+        System.out.println("Hard drive: " + this.computer.getHardDrive());
     }
     
 }
