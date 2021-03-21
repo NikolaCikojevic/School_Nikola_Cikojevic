@@ -5,6 +5,8 @@ public class Student {
     private String firstName;
     private String lastName;
     private int yearOfBirth;
+    private String course;
+    private String computer;
             
     public String getFirstName() {
         return this.firstName;
@@ -28,6 +30,14 @@ public class Student {
     
     public void setYearOfBirth(int newYearOfBirth) {
         this.yearOfBirth = newYearOfBirth;
+    }
+    
+    public String getCourse() {
+        return this.course;
+    }
+       
+    public String getComputer() {
+        return this.computer;
     }
     
     public Student() {
